@@ -20,4 +20,5 @@ public class CommonActions {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         wait.until((ExpectedCondition<Boolean>) arg -> element.isDisplayed());
     }
+    
 }
