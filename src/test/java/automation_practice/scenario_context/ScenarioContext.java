@@ -12,7 +12,7 @@ public class ScenarioContext {
         this.data = new HashMap<>();
     }
 
-    public static ScenarioContext getScenariooContext() {
+    public static ScenarioContext getScenarioContext() {
         if (Objects.isNull(instance)) {
             instance = new ScenarioContext();
         }
@@ -29,20 +29,3 @@ public class ScenarioContext {
 }
 
 
-//    private  Map<String, Object> scenarioContext;
-//
-//    public ScenarioContext(){
-//        scenarioContext = new HashMap<>();
-//    }
-//
-//    public void setContext(Context key, Object value) {
-//        scenarioContext.put(key.toString(), value);
-//    }
-//
-//    public Object getContext(Context key){
-//        return scenarioContext.get(key.toString());
-//    }
-//
-//    public Boolean isContains(Context key){
-//        return scenarioContext.containsKey(key.toString());
-//    }
