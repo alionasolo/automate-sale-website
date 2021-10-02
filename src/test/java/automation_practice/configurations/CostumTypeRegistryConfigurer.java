@@ -22,13 +22,13 @@ public class CostumTypeRegistryConfigurer extends DefaultTypeRegistryConfigurati
 
 
     public DataTableType defineOwnDataTable() {
-        //here is just an example we should adapt this class for our needs
+
         return new DataTableType(User.class,
                 (TableEntryTransformer<User>) dataRow -> {
 
                     User user = new User();
-                    user.setUsername(dataRow.get("username"));
-                    user.setPassword(dataRow.get("password"));
+                    user.setEmailAddress(dataRow.get("Email address"));
+                    user.setPassword(dataRow.get("Password"));
 
                     return user;
                 });
