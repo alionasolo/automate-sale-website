@@ -3,7 +3,6 @@ package automation_practice.steps;
 import automation_practice.actions.CommonActions;
 import automation_practice.browsers.Driver;
 import automation_practice.pages.AutomationPracticePage;
-import automation_practice.pages.ShoppingCart_checkout;
 import automation_practice.scenario_context.ScenarioContext;
 import automation_practice.scenario_context.ScreenShots;
 import cucumber.api.java.en.Given;
@@ -90,7 +89,7 @@ public class Steps {
         WebElement checkout = getDriver().findElement(By.xpath("//a[contains(@title,'Proceed to checkout')]"));
         checkout.click();
     }
-    ShoppingCart_checkout shoppingCart_checkout = new ShoppingCart_checkout(Driver.getDriver());
+
     @When("User click on Proceed to checkout button from {string}")
     public void continueCheckout(String firstOption){
         getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
