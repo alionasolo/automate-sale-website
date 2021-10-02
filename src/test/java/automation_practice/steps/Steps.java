@@ -37,7 +37,6 @@ public class Steps {
 
         getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     commonActions.moveToElement(automationPracticePage.getCategoryMenu());
-    makeScreenShots.makeAShot("CURRENT_PAGE");
     automationPracticePage.getCategoriesFromMenuByName(menuName).click();
     }
     @Given("User click on {string}  submenu")
@@ -131,7 +130,7 @@ public class Steps {
     public void payment(String paymentPage){
 
         Assert.assertEquals("User is on Payment page",getDriver().findElement(By.xpath("//span[contains(text(),'Payment')]")),paymentPage);
-    makeScreenShots.makeAShot("CURRENT_PAGE");
+
     ScenarioContext.getScenarioContext().getData(ScreenShots.CURRENT_PAGE);
     ScenarioContext.getScenarioContext().saveData(ScreenShots.CURRENT_PAGE,paymentPage);
     }
