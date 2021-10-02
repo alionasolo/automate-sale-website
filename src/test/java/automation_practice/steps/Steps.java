@@ -130,7 +130,11 @@ public class Steps {
     }
     @Then("User proceed to payment on {string} tab")
     public void payment(String paymentPage){
+
         Assert.assertEquals("User is on Payment page",getDriver().findElement(By.xpath("//span[contains(text(),'Payment')]")),paymentPage);
+    makeScreenShots.makeAShot("CURRENT_PAGE");
+    ScenarioContext.getScenarioContext().getData(ScreenShots.CURRENT_PAGE);
+    ScenarioContext.getScenarioContext().saveData(ScreenShots.CURRENT_PAGE,paymentPage);
     }
 
 
